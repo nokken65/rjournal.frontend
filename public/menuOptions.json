@@ -1,0 +1,24 @@
+{
+  "options": [
+    {
+      "id": "popular",
+      "label": "Популярное"
+    },
+    {
+      "id": "fresh",
+      "label": "Свежее"
+    },
+    {
+      "id": "bookmarks",
+      "label": "Закладки"
+    },
+    {
+      "id": "ratingTJ",
+      "label": "Рейтинг TJ"
+    },
+    {
+      "id": "subscriptions",
+      "label": "Подписки"
+    }
+  ]
+}
