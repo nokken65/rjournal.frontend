@@ -14,7 +14,7 @@ type MainLayoutProps = React.PropsWithChildren<{}>;
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div className='mt-16 w-full'>
+    <div className='w-full'>
       <HeaderWrapper>
         <Button
           action={() => asideMenuModel.events.toggleAsideMenuHidden()}
@@ -43,7 +43,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <AsideMenuWrapper>
           <MenuList />
         </AsideMenuWrapper>
-        <div className='w-full flex justify-center items-center'>
+        <div className='mt-16 w-full flex justify-center items-center'>
           {children}
         </div>
       </div>

@@ -13,7 +13,7 @@ const AsideMenuWrapperUI: React.FC<AsideMenuWrapperProps> = ({
   return (
     <aside
       className={clsx(
-        'mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
+        'mt-16 mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
         hidden && 'fixed transform -translate-x-56'
       )}
     >
