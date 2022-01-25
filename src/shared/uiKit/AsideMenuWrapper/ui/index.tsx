@@ -22,11 +22,9 @@ const AsideMenuWrapperUI: React.FC<AsideMenuWrapperProps> = ({
   );
 };
 
-const AsideMenuWrapper = reflect({
+export const AsideMenuWrapper = reflect({
   view: AsideMenuWrapperUI,
   bind: {
     hidden: asideMenuHidden$,
   },
 });
-
-export default AsideMenuWrapper;

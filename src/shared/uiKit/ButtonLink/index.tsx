@@ -8,7 +8,7 @@ type ButtonLinkProps = React.PropsWithChildren<{
   classNames?: string;
 }>;
 
-const ButtonLink: React.FC<ButtonLinkProps> = ({
+export const ButtonLink: React.FC<ButtonLinkProps> = ({
   children,
   to,
   action,
@@ -25,5 +25,3 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
     </Link>
   );
 };
-
-export default ButtonLink;

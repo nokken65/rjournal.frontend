@@ -31,7 +31,7 @@ const MenuListView: React.FC<MenuListProps> = ({ options, activeOption }) => {
   );
 };
 
-const MenuList = reflect({
+export const MenuList = reflect({
   view: MenuListView,
   bind: {
     options: options$,
@@ -42,5 +42,3 @@ const MenuList = reflect({
     mounted: getOptionsFx.prepend(() => {}),
   },
 });
-
-export default MenuList;

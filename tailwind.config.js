@@ -14,6 +14,7 @@ module.exports = {
       textAccentHover: '#0d7bcd',
       textNegative: '#E92A40',
       online: '#07A23B',
+      search: '#f5f5f5',
     },
     extend: {
       borderRadius: {

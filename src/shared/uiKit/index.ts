@@ -1,5 +1,6 @@
-export { default as AsideMenuWrapper } from './AsideMenuWrapper/ui';
-export { default as Button } from './Button';
-export { default as ButtonLink } from './ButtonLink';
-export { default as HeaderWrapper } from './HeaderWrapper';
-export { default as Logo } from './Logo';
+export * from './AsideMenuWrapper';
+export * from './Button';
+export * from './ButtonLink';
+export * from './HeaderWrapper';
+export * from './Input';
+export * from './Logo';
