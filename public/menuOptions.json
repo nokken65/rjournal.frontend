@@ -6,6 +6,16 @@
       "href": "/"
     },
     {
+      "id": "profile",
+      "label": "Profile",
+      "href": "/profile/34"
+    },
+    {
+      "id": "settings",
+      "label": "Settings",
+      "href": "/profile/settings"
+    },
+    {
       "id": "fresh",
       "label": "Свежее",
       "href": "/"
