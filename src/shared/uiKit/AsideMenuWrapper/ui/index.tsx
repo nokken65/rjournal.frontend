@@ -1,4 +1,5 @@
 import { reflect } from '@effector/reflect';
+import clsx from 'clsx';
 import React from 'react';
 
 import { asideMenuHidden$ } from '../model';
@@ -10,11 +11,14 @@ const AsideMenuWrapperUI: React.FC<AsideMenuWrapperProps> = ({
   hidden,
 }) => {
   return (
-    <>
-      {hidden ? null : (
-        <aside className='max-w-menu min-w-menu min-h-menu'>{children}</aside>
+    <aside
+      className={clsx(
+        'mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
+        hidden && 'fixed transform -translate-x-56'
       )}
-    </>
+    >
+      {children}
+    </aside>
   );
 };
 

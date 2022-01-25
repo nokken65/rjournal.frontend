@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MenuList from '@/entities/MenuList/ui';
+import MenuList from '@/features/MenuList/ui';
 import {
   AsideMenuWrapper,
   Button,
@@ -12,7 +12,7 @@ import { asideMenuModel } from '@/shared/uiKit/AsideMenuWrapper';
 
 const MainPage: React.FC = () => {
   return (
-    <div className='mt-16'>
+    <div className='mt-16 w-full'>
       <HeaderWrapper>
         <Button
           action={() => asideMenuModel.events.toggleAsideMenuHidden()}
@@ -37,11 +37,13 @@ const MainPage: React.FC = () => {
           Новая запись
         </ButtonLink>
       </HeaderWrapper>
-      <div className='flex'>
+      <div className='w-full h-full flex justify-between'>
         <AsideMenuWrapper>
           <MenuList />
         </AsideMenuWrapper>
-        <h1>Main</h1>
+        <div className='w-full flex justify-center items-center'>
+          <h1>Main</h1>
+        </div>
       </div>
     </div>
   );

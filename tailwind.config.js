@@ -2,7 +2,9 @@ module.exports = {
   content: ['./index.html', './src/**/*.{jsx,tsx}'],
   theme: {
     colors: {
+      transparent: 'transparent',
       white: '#fff',
+      whitePale: '#ffffff50',
       accent: '#e5a040',
       headerBg: '#fff4e2',
       bg: '#f2f2f2',

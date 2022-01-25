@@ -2,23 +2,28 @@
   "options": [
     {
       "id": "popular",
-      "label": "Популярное"
+      "label": "Популярное",
+      "href": "/"
     },
     {
       "id": "fresh",
-      "label": "Свежее"
+      "label": "Свежее",
+      "href": "/"
     },
     {
       "id": "bookmarks",
-      "label": "Закладки"
+      "label": "Закладки",
+      "href": "/"
     },
     {
-      "id": "ratingTJ",
-      "label": "Рейтинг TJ"
+      "id": "ratingRJ",
+      "label": "Рейтинг RJ",
+      "href": "/"
     },
     {
       "id": "subscriptions",
-      "label": "Подписки"
+      "label": "Подписки",
+      "href": "/"
     }
   ]
 }
