@@ -18,6 +18,7 @@ module.exports = {
         full: '50%',
       },
       minWidth: {
+        16: '1.5rem',
         menu: '14rem',
       },
       maxWidth: {

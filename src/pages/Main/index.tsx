@@ -16,7 +16,7 @@ const MainPage: React.FC = () => {
       <HeaderWrapper>
         <Button
           action={() => asideMenuModel.events.toggleAsideMenuHidden()}
-          classNames='mr-6'
+          classNames='pl-6 pr-6'
         >
           <svg
             className='h-full'
@@ -32,7 +32,7 @@ const MainPage: React.FC = () => {
             />
           </svg>
         </Button>
-        <Logo classNames='mr-6' />
+        <Logo classNames='pl-3 pr-3 mr-3' />
         <ButtonLink to='/newPost' classNames='mr-auto'>
           Новая запись
         </ButtonLink>
