@@ -4,13 +4,13 @@ import React from 'react';
 import type { Option } from '@/shared/api';
 import { ButtonLink } from '@/shared/uiKit';
 
-type MenuLstItemProps = React.PropsWithChildren<{
+type MenuItemProps = React.PropsWithChildren<{
   option: Option;
   active?: boolean;
   onClick?: () => void;
 }>;
 
-const MenuListItem: React.FC<MenuLstItemProps> = ({
+const MenuItem: React.FC<MenuItemProps> = ({
   option,
   active = false,
   onClick,
@@ -20,10 +20,10 @@ const MenuListItem: React.FC<MenuLstItemProps> = ({
       <ButtonLink
         to={option.href}
         action={onClick}
-        classNames={clsx(
+        className={clsx(
           'w-full h-full pl-3 pr-3 border-none justify-start',
-          active && 'bg-white',
-          !active && 'hover:bg-whitePale'
+          active && 'bg-white-100',
+          !active && 'hover:bg-white-opacity-80'
         )}
       >
         {option.label}
@@ -32,4 +32,4 @@ const MenuListItem: React.FC<MenuLstItemProps> = ({
   );
 };
 
-export default MenuListItem;
+export default MenuItem;

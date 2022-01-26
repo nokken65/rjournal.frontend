@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+import { PageLoader } from '@/shared/uiKit/Loader';
 import MainLayout from '@/widgets/MainLayout';
 
 const MainPage = lazy(() => import('./Main'));
@@ -11,7 +12,7 @@ const SettingsPage = lazy(() => import('./Settings'));
 const Routing: React.FC = () => {
   return (
     <MainLayout>
-      <Suspense fallback={'Loading...'}>
+      <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path='/'>
             <Route index={true} element={<MainPage />} />

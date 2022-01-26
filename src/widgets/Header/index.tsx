@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     <HeaderWrapper>
       <Button
         action={() => asideMenuModel.events.toggleAsideMenuHidden()}
-        classNames='pl-6 pr-6'
+        className='pl-6 pr-6'
       >
         <svg
           className='h-full'
@@ -28,10 +28,16 @@ const Header: React.FC = () => {
       <Logo classNames='pl-3 pr-3 mr-3' />
       <SearchNews />
       <ButtonLink
-        to='/newPost'
-        classNames='ml-3 p-2 pl-3 pr-3 rounded-xl mr-auto bg-white border hover:shadow-md'
+        to='/writeNews'
+        className='ml-3 p-2 pl-3 pr-3 rounded-xl mr-auto bg-white-100 border font-medium border-gray-opacity-50 hover:shadow-md'
       >
         Новая запись
+      </ButtonLink>
+      <ButtonLink
+        to='/login'
+        className='p-2 pl-3 pr-3 rounded-xl mr-3 font-medium hover:text-primary-100'
+      >
+        Войти
       </ButtonLink>
     </HeaderWrapper>
   );

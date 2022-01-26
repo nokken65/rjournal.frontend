@@ -4,17 +4,19 @@ import React from 'react';
 
 import { asideMenuHidden$ } from '../model';
 
-type AsideMenuWrapperProps = React.PropsWithChildren<{ hidden: boolean }>;
+type AsideMenuWrapperProps = React.PropsWithChildren<{
+  hidden: boolean;
+}>;
 
-const AsideMenuWrapperUI: React.FC<AsideMenuWrapperProps> = ({
+const AsideMenuWrapperView: React.FC<AsideMenuWrapperProps> = ({
   children,
   hidden,
 }) => {
   return (
     <aside
       className={clsx(
-        'sticky mt-16 mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
-        hidden && 'transform -translate-x-56'
+        'fixed top-16 left-0 mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
+        hidden && `transform -translate-x-56`
       )}
     >
       {children}
@@ -23,7 +25,7 @@ const AsideMenuWrapperUI: React.FC<AsideMenuWrapperProps> = ({
 };
 
 export const AsideMenuWrapper = reflect({
-  view: AsideMenuWrapperUI,
+  view: AsideMenuWrapperView,
   bind: {
     hidden: asideMenuHidden$,
   },

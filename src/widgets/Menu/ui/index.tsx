@@ -1,7 +1,7 @@
 import { reflect } from '@effector/reflect';
 import React from 'react';
 
-import MenuListItem from '@/entities/MenuListItem';
+import MenuItem from '@/entities/MenuItem';
 import type { Option } from '@/shared/api';
 
 import {
@@ -11,16 +11,16 @@ import {
   options$,
 } from '../model';
 
-type MenuListProps = {
+type MenuProps = {
   options: Option[];
   activeOption: string;
 };
 
-const MenuListView: React.FC<MenuListProps> = ({ options, activeOption }) => {
+const MenuView: React.FC<MenuProps> = ({ options, activeOption }) => {
   return (
     <ul className='m-3'>
       {options.map((option) => (
-        <MenuListItem
+        <MenuItem
           key={option.id}
           active={option.id === activeOption}
           option={option}
@@ -31,8 +31,8 @@ const MenuListView: React.FC<MenuListProps> = ({ options, activeOption }) => {
   );
 };
 
-export const MenuList = reflect({
-  view: MenuListView,
+export const Menu = reflect({
+  view: MenuView,
   bind: {
     options: options$,
     activeOption: activeOption$,

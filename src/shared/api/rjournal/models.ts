@@ -3,3 +3,10 @@ export type Option = {
   label: string;
   href: string;
 };
+
+export type Comment = {
+  id: string;
+  userId: string;
+  postId: string;
+  content: string;
+};

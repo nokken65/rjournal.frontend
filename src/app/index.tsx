@@ -6,11 +6,7 @@ import Routing from '@/pages';
 import { withProviders } from './providers';
 
 const App = () => {
-  return (
-    <div className='flex w-full bg-bg'>
-      <Routing />
-    </div>
-  );
+  return <Routing />;
 };
 
 export default withProviders(App);
