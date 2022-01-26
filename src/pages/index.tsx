@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { LiveComments } from '@/features/LiveComments/ui';
-import { AsideMenuWrapper } from '@/shared/uiKit';
 import { PageLoader } from '@/shared/uiKit/Loader';
 import Header from '@/widgets/Header';
 import { Menu } from '@/widgets/Menu';
