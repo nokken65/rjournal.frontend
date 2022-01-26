@@ -2,13 +2,13 @@ import React from 'react';
 
 import { SearchNews } from '@/features/SearchNews';
 import { Button, ButtonLink, HeaderWrapper, Logo } from '@/shared/uiKit';
-import { asideMenuModel } from '@/shared/uiKit/AsideMenuWrapper';
+import { menuModel } from '@/widgets/Menu';
 
 const Header: React.FC = () => {
   return (
     <HeaderWrapper>
       <Button
-        action={() => asideMenuModel.events.toggleAsideMenuHidden()}
+        onClick={() => menuModel.toggleMenuHidden()}
         className='pl-6 pr-6'
       >
         <svg
