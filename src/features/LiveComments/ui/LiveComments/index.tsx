@@ -1,4 +1,5 @@
 import { reflect, variant } from '@effector/reflect';
+import arrow from 'assets/icons/arrow.svg';
 import clsx from 'clsx';
 import { combine } from 'effector';
 import React from 'react';
@@ -28,11 +29,19 @@ const LiveCommentsView: React.FC<LiveCommentsProps> = ({
       <Button
         className={clsx(
           'font-medium text-xl transition-transform duration-200',
-          hidden && 'transform -translate-x-40 translate-y-12 -rotate-90 '
+          hidden && 'transform -translate-x-40 translate-y-20  -rotate-90 '
         )}
         onClick={toggleHidden}
       >
         Комментарии
+        <img
+          className={clsx(
+            'h-3 w-3 ml-3 mt-1 transform rotate-90 transition-transform duration-500',
+            hidden && 'tranform rotate-0'
+          )}
+          src={arrow}
+          alt='arrow'
+        />
       </Button>
       <ul className='flex flex-col mt-6'>
         <LiveCommentsContent />

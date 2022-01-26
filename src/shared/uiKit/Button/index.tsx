@@ -13,7 +13,10 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={clsx('appearance-none border-none flex', className)}
+      className={clsx(
+        'appearance-none border-none flex items-center',
+        className
+      )}
       {...props}
     >
       {children}

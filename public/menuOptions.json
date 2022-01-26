@@ -3,36 +3,43 @@
     {
       "id": "popular",
       "label": "Популярное",
+      "iconUrl": "assets/icons/flame.svg",
       "href": "/"
     },
     {
       "id": "profile",
       "label": "Profile",
+      "iconUrl": "assets/icons/flame.svg",
       "href": "/profile/34"
     },
     {
       "id": "settings",
       "label": "Settings",
+      "iconUrl": "assets/icons/flame.svg",
       "href": "/profile/settings"
     },
     {
       "id": "fresh",
       "label": "Свежее",
+      "iconUrl": "assets/icons/clock.svg",
       "href": "/"
     },
     {
       "id": "bookmarks",
       "label": "Закладки",
+      "iconUrl": "assets/icons/bookmark.svg",
       "href": "/"
     },
     {
       "id": "ratingRJ",
       "label": "Рейтинг RJ",
+      "iconUrl": "assets/icons/rating.svg",
       "href": "/"
     },
     {
       "id": "subscriptions",
       "label": "Подписки",
+      "iconUrl": "assets/icons/subscriptions.svg",
       "href": "/"
     }
   ]

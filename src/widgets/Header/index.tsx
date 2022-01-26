@@ -1,3 +1,5 @@
+import burger from 'assets/icons/burger.svg';
+import person from 'assets/icons/person.svg';
 import React from 'react';
 
 import { SearchNews } from '@/features/SearchNews';
@@ -9,23 +11,11 @@ const Header: React.FC = () => {
     <HeaderWrapper>
       <Button
         onClick={() => menuModel.toggleMenuHidden()}
-        className='pl-6 pr-6'
+        className='pl-6 pr-6 h-full flex items-center'
       >
-        <svg
-          className='h-full'
-          width='20'
-          height='20'
-          viewBox='0 0 64 64'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            d='M0 8H64V0H0V8ZM0 64H64V56H0V64ZM0 36H64V28H0V36Z'
-            fill='black'
-          />
-        </svg>
+        <img className='w-6' src={burger} alt='burger' />
       </Button>
-      <Logo classNames='pl-3 pr-3 mr-3' />
+      <Logo className='pl-3 pr-3 mr-3 h-full' />
       <SearchNews />
       <ButtonLink
         to='/write'
@@ -35,8 +25,9 @@ const Header: React.FC = () => {
       </ButtonLink>
       <ButtonLink
         to='/login'
-        className='p-2 pl-3 pr-3 rounded-xl mr-3 font-medium hover:text-primary-100'
+        className='p-2 pl-3 pr-3 rounded-xl mr-6 font-medium hover:text-primary-100'
       >
+        <img className='w-6 mr-3' src={person} alt='burger' />
         Войти
       </ButtonLink>
     </HeaderWrapper>

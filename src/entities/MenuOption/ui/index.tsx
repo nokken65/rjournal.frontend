@@ -24,6 +24,12 @@ export const MenuOption: React.FC<MenuOptionProps> = ({
         !active && 'hover:bg-white-opacity-80'
       )}
     >
+      <img
+        className='h-full p-3 pl-0'
+        loading='lazy'
+        src={data.iconUrl}
+        alt={data.label}
+      />
       {data.label}
     </ButtonLink>
   );
