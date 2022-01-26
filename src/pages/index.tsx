@@ -8,6 +8,7 @@ const MainPage = lazy(() => import('./Main'));
 const NewsPage = lazy(() => import('./News'));
 const ProfilePage = lazy(() => import('./Profile'));
 const SettingsPage = lazy(() => import('./Settings'));
+const WriteNewsPage = lazy(() => import('./WriteNews'));
 
 const Routing: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Routing: React.FC = () => {
             <Route path=':id' element={<ProfilePage />} />
             <Route path='settings' element={<SettingsPage />} />
           </Route>
+          <Route path='/write' element={<WriteNewsPage />} />
         </Routes>
       </Suspense>
     </MainLayout>

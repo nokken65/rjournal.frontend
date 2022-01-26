@@ -18,7 +18,7 @@ type MenuProps = {
 
 const MenuView: React.FC<MenuProps> = ({ options, activeOption }) => {
   return (
-    <ul className='m-3'>
+    <ul className='flex flex-col w-full m-3'>
       {options.map((option) => (
         <MenuItem
           key={option.id}

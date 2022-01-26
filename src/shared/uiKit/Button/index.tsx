@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={clsx('appearance-none border-none flex h-full', className)}
+      className={clsx('appearance-none border-none flex', className)}
       onClick={action}
     >
       {children}

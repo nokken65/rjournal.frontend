@@ -28,7 +28,7 @@ const Header: React.FC = () => {
       <Logo classNames='pl-3 pr-3 mr-3' />
       <SearchNews />
       <ButtonLink
-        to='/writeNews'
+        to='/write'
         className='ml-3 p-2 pl-3 pr-3 rounded-xl mr-auto bg-white-100 border font-medium border-gray-opacity-50 hover:shadow-md'
       >
         Новая запись

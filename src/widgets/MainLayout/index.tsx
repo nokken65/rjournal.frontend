@@ -11,16 +11,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className='overflow-hidden w-full bg-white-bg'>
       <Header />
-      <div className='w-full h-full flex justify-between'>
+      <div className='mt-16 w-full h-full flex justify-between'>
         <AsideMenuWrapper>
           <Menu />
         </AsideMenuWrapper>
-        <div className='mt-16 w-full flex justify-center items-center'>
+        <div className='w-full flex justify-center items-center'>
           {children}
         </div>
-        <div className='mt-16'>
-          <LiveComments />
-        </div>
+        <LiveComments />
         {/* <AsideMenuWrapper position='right'>
           <Menu />
         </AsideMenuWrapper> */}

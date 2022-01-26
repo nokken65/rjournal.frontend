@@ -20,20 +20,20 @@ const LiveCommentsView: React.FC<LiveCommentsProps> = ({
   return (
     <div
       className={clsx(
-        'fixed top-16 right-0 p-5 transition-transform duration-100',
-        hidden && 'transform translate-x-64'
+        'flex flex-col justify-start items-start p-5 min-w-menu max-w-menu transition-transform duration-200',
+        hidden && 'fixed right-0 transform translate-x-64'
       )}
     >
       <Button
         className={clsx(
-          'font-medium text-xl transition-transform duration-200 delay-100',
-          hidden && 'transform -translate-x-28 translate-y-12 -rotate-90 '
+          'font-medium text-xl transition-transform duration-200',
+          hidden && 'transform -translate-x-40 translate-y-12 -rotate-90 '
         )}
         action={toggleHidden}
       >
         Комментарии
       </Button>
-      <ul className={clsx('flex flex-col min-w-menu max-w-menu')}>
+      <ul className='flex flex-col mt-6'>
         <LiveCommentsContent />
       </ul>
     </div>
@@ -67,8 +67,8 @@ const LiveCommentsList = list({
   mapItem: {
     comment: (comment) => comment,
   },
+  getKey: (comment) => comment.id,
 });
-//
 
 const LiveCommentsContent = variant({
   source: combine(

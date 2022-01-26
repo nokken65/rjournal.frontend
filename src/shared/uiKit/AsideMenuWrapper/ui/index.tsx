@@ -15,8 +15,8 @@ const AsideMenuWrapperView: React.FC<AsideMenuWrapperProps> = ({
   return (
     <aside
       className={clsx(
-        'fixed top-16 left-0 mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
-        hidden && `transform -translate-x-56`
+        'flex mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
+        hidden && `fixed left-0 transform -translate-x-56`
       )}
     >
       {children}
