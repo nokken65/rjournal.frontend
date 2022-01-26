@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React, { SyntheticEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import { Button } from '@/shared/uiKit';
 
@@ -8,10 +7,8 @@ type ModalProps = React.ComponentProps<'div'> &
   React.PropsWithChildren<{ className?: string }>;
 
 export const Modal: React.FC<ModalProps> = ({ children, className }) => {
-  const navigate = useNavigate();
   const close = (event: SyntheticEvent) => {
     event.stopPropagation();
-    navigate(-1);
   };
 
   return (
