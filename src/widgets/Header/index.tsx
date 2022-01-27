@@ -18,9 +18,7 @@ const Header: React.FC = () => {
       <Logo />
       <SearchNews />
       <ButtonLink
-        to={{
-          pathname: 'write',
-        }}
+        to='write'
         className='ml-3 p-2 pl-3 pr-3 rounded-xl mr-auto bg-white-100 border font-medium border-gray-opacity-50 hover:shadow-md'
       >
         Новая запись
