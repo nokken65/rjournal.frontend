@@ -37,7 +37,7 @@ export const PostCard: React.FC<PostCardProps> = ({ data }) => {
         <h2 className='font-medium text-2xl mb-3'>{data.title}</h2>
         <p className=''>{data.shortDescription}</p>
       </div>
-      <img src={data.previewImgUrl} />
+      <img loading='lazy' src={data.previewImgUrl} />
       <div className='h-14 pr-3 flex items-center justify-between'>
         <Button className='h-full w-16 hover:bg-secondary-opacity-20 z-10'>
           <img className='w-5 h-5' src={comment} alt='dots' />
