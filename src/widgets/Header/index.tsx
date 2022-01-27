@@ -20,7 +20,6 @@ const Header: React.FC = () => {
       <ButtonLink
         to={{
           pathname: 'write',
-          search: '?modal',
         }}
         className='ml-3 p-2 pl-3 pr-3 rounded-xl mr-auto bg-white-100 border font-medium border-gray-opacity-50 hover:shadow-md'
       >

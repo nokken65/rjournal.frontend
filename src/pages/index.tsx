@@ -1,11 +1,5 @@
-import React, {
-  lazy,
-  LazyExoticComponent,
-  ReactFragment,
-  ReactNode,
-  Suspense,
-} from 'react';
-import { crea, Outlet, Route, RouteProps, Routes } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
+import { Outlet, Route, Routes } from 'react-router-dom';
 
 import { LiveComments } from '@/features/LiveComments/ui';
 import { PageLoader } from '@/shared/uiKit/Loader';
