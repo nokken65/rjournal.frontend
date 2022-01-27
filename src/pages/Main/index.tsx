@@ -1,13 +1,13 @@
 import React from 'react';
 
+import { NewsFeed } from '@/features/NewsFeed';
+
 const MainPage: React.FC = () => {
+  console.log(new Date().toISOString());
+
   return (
-    <div className='w-full h-full flex flex-col justify-center items-center'>
-      <h2>Main page</h2>
-      <br />
-      {/* <Modal className='w-96 h-96'>
-        <h2>Its modal dialog</h2>
-      </Modal> */}
+    <div className='mt-8 w-full h-full flex flex-col justify-between items-center'>
+      <NewsFeed />
     </div>
   );
 };

@@ -11,3 +11,12 @@ export type Comment = {
   postId: string;
   content: string;
 };
+
+export type Post = {
+  id: string;
+  userName: string;
+  title: string;
+  shortDescription: string;
+  previewImgUrl: string;
+  createdAt: string;
+};

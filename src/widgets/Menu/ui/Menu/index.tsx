@@ -17,8 +17,8 @@ const MenuView: React.FC<MenuProps> = ({ hidden, toggleHidden }) => {
   return (
     <aside
       className={clsx(
-        'flex mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
-        hidden && `fixed left-0 transform -translate-x-56`
+        'fixed left-0 flex mr-auto max-w-menu min-w-menu min-h-menu transition-transform duration-100 ease-in',
+        hidden && `transform -translate-x-56`
       )}
     >
       <ul className='flex flex-col w-full m-3'>

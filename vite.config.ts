@@ -15,4 +15,5 @@ export default defineConfig({
   server: {
     host: true,
   },
+  clearScreen: false,
 });

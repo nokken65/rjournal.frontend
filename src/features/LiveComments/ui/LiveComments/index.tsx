@@ -1,9 +1,9 @@
 import { reflect, variant } from '@effector/reflect';
-import arrow from 'assets/icons/arrow.svg';
 import clsx from 'clsx';
 import { combine } from 'effector';
 import React from 'react';
 
+import arrow from '/assets/icons/arrow.svg';
 import { commentModel } from '@/entities/Comment';
 import { Button } from '@/shared/uiKit';
 
@@ -22,8 +22,8 @@ const LiveCommentsView: React.FC<LiveCommentsProps> = ({
   return (
     <div
       className={clsx(
-        'flex flex-col justify-start items-start p-5 min-w-menu max-w-menu transition-transform duration-200',
-        hidden && 'fixed right-0 transform translate-x-64'
+        'fixed right-0 flex flex-col justify-start items-start p-5 min-w-menu max-w-menu transition-transform duration-200',
+        hidden && 'transform translate-x-64'
       )}
     >
       <Button

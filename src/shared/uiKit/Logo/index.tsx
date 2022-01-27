@@ -1,15 +1,13 @@
-import logo from 'assets/icons/logo.svg';
 import clsx from 'clsx';
 import React from 'react';
 
-type LogoProps = React.ComponentProps<'a'> & {
-  className?: string;
-};
+import logo from '/assets/icons/logo.svg';
+import { ButtonLink } from '@/shared/uiKit';
 
-export const Logo: React.FC<LogoProps> = ({ className }) => {
+export const Logo: React.FC = () => {
   return (
-    <a href='/' role='button' className={clsx('flex', className)}>
+    <ButtonLink to='/' className={clsx('flex pl-3 pr-3 mr-3 h-full')}>
       <img src={logo} alt='logo' width={32} height={50} />
-    </a>
+    </ButtonLink>
   );
 };

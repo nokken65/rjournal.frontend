@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={clsx(
-        'appearance-none border-none flex items-center',
+        'appearance-none border-none flex items-center justify-center',
         className
       )}
       {...props}

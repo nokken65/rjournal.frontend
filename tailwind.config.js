@@ -30,7 +30,13 @@ module.exports = {
           50: '#59595950',
         },
       },
-      secondary: { 100: '#4086E0', 200: '#0d7bcd' },
+      secondary: {
+        100: '#4086E0',
+        200: '#0d7bcd',
+        opacity: {
+          20: '#4086E020',
+        },
+      },
       negative: '#E92A40',
       online: '#07A23B',
     },
@@ -42,6 +48,7 @@ module.exports = {
       minWidth: {
         16: '1.5rem',
         menu: '14rem',
+        'screen-sm': '640px',
       },
       maxWidth: {
         menu: '14rem',

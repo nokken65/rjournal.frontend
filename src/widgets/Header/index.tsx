@@ -1,7 +1,7 @@
-import burger from 'assets/icons/burger.svg';
-import person from 'assets/icons/person.svg';
 import React from 'react';
 
+import burger from '/assets/icons/burger.svg';
+import person from '/assets/icons/person.svg';
 import { SearchNews } from '@/features/SearchNews';
 import { Button, ButtonLink, HeaderWrapper, Logo } from '@/shared/uiKit';
 import { menuModel } from '@/widgets/Menu';
@@ -15,10 +15,13 @@ const Header: React.FC = () => {
       >
         <img className='w-6' src={burger} alt='burger' />
       </Button>
-      <Logo className='pl-3 pr-3 mr-3 h-full' />
+      <Logo />
       <SearchNews />
       <ButtonLink
-        to='/write'
+        to={{
+          pathname: 'write',
+          search: '?modal',
+        }}
         className='ml-3 p-2 pl-3 pr-3 rounded-xl mr-auto bg-white-100 border font-medium border-gray-opacity-50 hover:shadow-md'
       >
         Новая запись
