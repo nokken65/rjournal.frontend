@@ -19,7 +19,7 @@ export const MenuOption: React.FC<MenuOptionProps> = ({
       to={data.href}
       onClick={() => setActive(data.id)}
       className={clsx(
-        'w-full h-full pl-3 pr-3 border-none justify-start',
+        'h-full w-full justify-start border-none pl-3 pr-3',
         active && 'bg-white-100',
         !active && 'hover:bg-white-opacity-80'
       )}

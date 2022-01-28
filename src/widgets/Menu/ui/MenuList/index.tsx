@@ -17,7 +17,7 @@ const MenuListView: React.FC<MenuListProps> = ({
   setActive,
 }) => {
   return (
-    <li className='list-none mt-1 mb-1 h-11 select-none'>
+    <li className='mt-1 mb-1 list-none select-none h-11'>
       <MenuOption
         data={option}
         active={option.id === activeOption}

@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     <HeaderWrapper>
       <Button
         onClick={() => menuModel.toggleMenuHidden()}
-        className='pl-6 pr-6 h-full flex items-center'
+        className='flex items-center h-full pl-6 pr-6'
       >
         <img className='w-6' src={burger} alt='burger' />
       </Button>
@@ -19,13 +19,13 @@ const Header: React.FC = () => {
       <SearchNews />
       <ButtonLink
         to='write'
-        className='ml-3 p-2 pl-3 pr-3 rounded-xl mr-auto bg-white-100 border font-medium border-gray-opacity-50 hover:shadow-md'
+        className='p-2 pl-3 pr-3 ml-3 mr-auto font-medium border rounded-xl border-gray-opacity-50 bg-white-100 hover:shadow-md'
       >
         Новая запись
       </ButtonLink>
       <ButtonLink
         to='/login'
-        className='p-2 pl-3 pr-3 rounded-xl mr-6 font-medium hover:text-primary-100'
+        className='p-2 pl-3 pr-3 mr-6 font-medium rounded-xl hover:text-primary-100'
       >
         <img className='w-6 mr-3' src={person} alt='burger' />
         Войти
