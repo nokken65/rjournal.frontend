@@ -1,3 +1,3 @@
 # rjournal
 
-TJournal react clone
+## TJournal react clone

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:docker":"docker-compose -f docker-compose.dev.yml up"
   },
   "dependencies": {
     "@effector/reflect": "^7.1.1",

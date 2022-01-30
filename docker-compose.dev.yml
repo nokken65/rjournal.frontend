@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  frontend:
+    container_name: rjournal.frontend
+    image: node:17-alpine3.14
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/app'
+    environment:
+      NODE_ENV: development
+      HOST: 0.0.0.0
+    networks:
+      - api
+    working_dir: /app
+    restart: always
+    command: sh -c "cd /app; yarn install; yarn run dev"
+networks:
+  api:
+    external: true
+    name: 'rjournalbackend_api'

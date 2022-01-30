@@ -6,7 +6,7 @@ const MainPage: React.FC = () => {
   console.log(new Date().toISOString());
 
   return (
-    <div className='mt-8 w-full h-full flex flex-col justify-between items-center'>
+    <div className='flex flex-col items-center justify-between w-full h-full mt-8'>
       <NewsFeed />
     </div>
   );
