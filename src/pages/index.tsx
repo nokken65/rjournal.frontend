@@ -1,10 +1,11 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { Outlet, Route, Routes } from 'react-router-dom';
 
 import { LiveComments } from '@/features/LiveComments/ui';
+import { Menu } from '@/features/Menu';
 import { PageLoader } from '@/shared/uiKit/Loader';
 import Header from '@/widgets/Header';
-import { Menu } from '@/widgets/Menu';
+import { Sidebar, sidebarModel } from '@/widgets/Sidebar';
 
 const MainPage = lazy(() => import('./Main'));
 const ProfilePage = lazy(() => import('./Profile'));
@@ -60,10 +61,12 @@ const Routing: React.FC = () => {
 
 const Layout: React.FC = () => {
   return (
-    <div className='overflow-hidden w-full bg-white-bg'>
+    <div className='w-full overflow-hidden bg-white-bg'>
       <Header />
-      <div className='mt-16 w-full h-full flex justify-between'>
-        <Menu />
+      <div className='mt-16 flex h-full w-full justify-between'>
+        <Sidebar>
+          <Menu />
+        </Sidebar>
         <Outlet />
       </div>
     </div>
@@ -72,17 +75,23 @@ const Layout: React.FC = () => {
 
 const MainLayout: React.FC = () => (
   <>
-    <div className='ml-56 mr-56 w-full flex justify-center items-center'>
+    <div className='flex w-full items-center justify-center lg:ml-56 xl:mr-56'>
       <Outlet />
     </div>
     <LiveComments />
   </>
 );
 
-const WriteLayout: React.FC = () => (
-  <div className='w-full flex justify-center items-center'>
-    <Outlet />
-  </div>
-);
+const WriteLayout: React.FC = () => {
+  useEffect(() => {
+    sidebarModel.events.setSidebarHidden(true);
+  }, []);
+
+  return (
+    <div className='flex w-full items-center justify-center'>
+      <Outlet />
+    </div>
+  );
+};
 
 export default Routing;

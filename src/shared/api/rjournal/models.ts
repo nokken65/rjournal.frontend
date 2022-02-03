@@ -1,7 +1,7 @@
 export type Option = {
   id: string;
   label: string;
-  iconUrl: string;
+  icon: string;
   href: string;
 };
 

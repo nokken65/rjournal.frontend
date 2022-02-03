@@ -3,9 +3,8 @@ import clsx from 'clsx';
 import { combine } from 'effector';
 import React from 'react';
 
-import arrow from '/assets/icons/arrow.svg';
 import { commentModel } from '@/entities/Comment';
-import { Button } from '@/shared/uiKit';
+import { Button, Icon } from '@/shared/uiKit';
 
 import { liveCommentsHidden$, toggleLiveCommentsHidden } from '../../model';
 import { LiveCommentsList } from '../LiveCommentsList';
@@ -22,28 +21,28 @@ const LiveCommentsView: React.FC<LiveCommentsProps> = ({
   return (
     <div
       className={clsx(
-        'fixed right-0 flex flex-col justify-start items-start p-5 min-w-menu max-w-menu transition-transform duration-200',
-        hidden && 'transform translate-x-64'
+        'fixed right-0 z-40 flex h-full min-w-menu max-w-menu flex-col items-start justify-start bg-white-bg p-5 transition-transform duration-200',
+        hidden && 'translate-x-64 transform'
       )}
     >
       <Button
         className={clsx(
-          'font-medium text-xl transition-transform duration-200',
-          hidden && 'transform -translate-x-40 translate-y-20  -rotate-90 '
+          'border-none bg-transparent text-xl font-medium transition-transform duration-200',
+          hidden && '-translate-x-40 translate-y-20 -rotate-90  transform '
         )}
         onClick={toggleHidden}
       >
-        Комментарии
-        <img
+        <span>Комментарии</span>
+        <Icon
+          name='arrow'
+          size={12}
           className={clsx(
-            'h-3 w-3 ml-3 mt-1 transform rotate-90 transition-transform duration-500',
+            'ml-3 mt-1 rotate-90 transform transition-transform duration-200',
             hidden && 'tranform rotate-0'
           )}
-          src={arrow}
-          alt='arrow'
         />
       </Button>
-      <ul className='flex flex-col mt-6'>
+      <ul className='mt-6 flex flex-col'>
         <LiveCommentsContent />
       </ul>
     </div>

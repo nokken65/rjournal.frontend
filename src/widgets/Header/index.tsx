@@ -1,36 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import burger from '/assets/icons/burger.svg';
-import person from '/assets/icons/person.svg';
 import { SearchNews } from '@/features/SearchNews';
-import { Button, ButtonLink, HeaderWrapper, Logo } from '@/shared/uiKit';
-import { menuModel } from '@/widgets/Menu';
+import { Button, Icon, Logo } from '@/shared/uiKit';
+import { sidebarModel } from '@/widgets/Sidebar';
 
 const Header: React.FC = () => {
   return (
-    <HeaderWrapper>
+    <header className='fixed top-0 left-0 z-50 flex h-16 w-full items-center justify-between bg-primary-50 shadow-sm'>
       <Button
-        onClick={() => menuModel.toggleMenuHidden()}
-        className='flex items-center h-full pl-6 pr-6'
+        onClick={() => sidebarModel.events.toggleSidebarHidden()}
+        className='border-none bg-transparent pl-6 pr-3'
       >
-        <img className='w-6' src={burger} alt='burger' />
+        <Icon name='burger' size={20} />
       </Button>
       <Logo />
       <SearchNews />
-      <ButtonLink
+      <Link
         to='write'
-        className='p-2 pl-3 pr-3 ml-3 mr-auto font-medium border rounded-xl border-gray-opacity-50 bg-white-100 hover:shadow-md'
+        className='ml-3 mr-auto flex h-10 items-center rounded-lg border-gray-50 bg-white-100 pl-3 pr-3 font-medium shadow-neo'
       >
-        Новая запись
-      </ButtonLink>
-      <ButtonLink
+        <Icon name='write' size={20} className='md:hidden' />
+        <span className='hidden md:block'>Написать новость</span>
+      </Link>
+      <Link
         to='/login'
-        className='p-2 pl-3 pr-3 mr-6 font-medium rounded-xl hover:text-primary-100'
+        className='mr-6 flex items-center font-medium hover:text-primary-100'
       >
-        <img className='w-6 mr-3' src={person} alt='burger' />
-        Войти
-      </ButtonLink>
-    </HeaderWrapper>
+        <Icon name='person' className='mr-3' />
+        <span>Войти</span>
+      </Link>
+    </header>
   );
 };
 

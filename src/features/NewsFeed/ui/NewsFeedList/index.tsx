@@ -9,7 +9,7 @@ type NewsFeedListProps = {
 
 const NewsFeedListView: React.FC<NewsFeedListProps> = ({ post }) => {
   return (
-    <li className='list-none mb-3'>
+    <li className='m-5 mt-0 list-none'>
       <PostCard data={post} />
     </li>
   );

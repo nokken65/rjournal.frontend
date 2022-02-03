@@ -24,6 +24,7 @@ module.exports = {
         },
       },
       gray: {
+        50: '#BCBCBC',
         100: '#595959',
         opacity: {
           10: '#59595910',
@@ -41,6 +42,13 @@ module.exports = {
       online: '#07A23B',
     },
     extend: {
+      backgroundColor: {
+        none: 'none',
+        transparent: 'transparent',
+      },
+      borderWidth: {
+        '1/2': '0.5px',
+      },
       borderRadius: {
         full: '50%',
       },
@@ -57,6 +65,7 @@ module.exports = {
         menu: 'calc(100vh - 64px)',
       },
       boxShadow: {
+        neo: '0 2px 2px 0 rgba(0, 0, 0, 0.20), inset 0 -2px 2px 0 rgba(0, 0, 0, 0.20)',
         outline: '0 0 0.1rem 0.1rem rgba(0, 0, 0, 0.3)',
       },
       keyframes: {

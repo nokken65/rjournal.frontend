@@ -1,5 +1,5 @@
 export * from './Button';
-export * from './ButtonLink';
-export * from './HeaderWrapper';
+export * from './Icon';
+export * from './Item';
 export * from './Logo';
 export * from './Modal';

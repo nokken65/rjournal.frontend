@@ -8,7 +8,7 @@ import { NewsFeedList } from '../NewsFeedList';
 
 export const NewsFeed: React.FC = () => {
   return (
-    <ul className='flex flex-col'>
+    <ul className='flex flex-col justify-center'>
       <NewsFeedContent />
     </ul>
   );
