@@ -7,10 +7,10 @@ import { sidebarModel } from '@/widgets/Sidebar';
 
 const Header: React.FC = () => {
   return (
-    <header className='fixed top-0 left-0 z-50 flex h-16 w-full items-center justify-between bg-primary-50 shadow-sm'>
+    <header className='fixed top-0 left-0 z-50 flex items-center justify-between w-full h-16 shadow-sm bg-primary-50'>
       <Button
         onClick={() => sidebarModel.events.toggleSidebarHidden()}
-        className='border-none bg-transparent pl-6 pr-3'
+        className='pl-6 pr-3 bg-transparent border-none'
       >
         <Icon name='burger' size={20} />
       </Button>
@@ -18,14 +18,14 @@ const Header: React.FC = () => {
       <SearchNews />
       <Link
         to='write'
-        className='ml-3 mr-auto flex h-10 items-center rounded-lg border-gray-50 bg-white-100 pl-3 pr-3 font-medium shadow-neo'
+        className='flex items-center h-10 pl-3 pr-3 ml-3 mr-auto font-medium rounded-lg border-gray-50 bg-white-100 shadow-neo'
       >
         <Icon name='write' size={20} className='md:hidden' />
         <span className='hidden md:block'>Написать новость</span>
       </Link>
       <Link
         to='/login'
-        className='mr-6 flex items-center font-medium hover:text-primary-100'
+        className='flex items-center mr-6 font-medium hover:text-primary-100'
       >
         <Icon name='person' className='mr-3' />
         <span>Войти</span>

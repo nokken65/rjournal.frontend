@@ -2,7 +2,6 @@ module.exports = {
   content: ['./index.html', './src/**/*.{jsx,tsx}'],
   theme: {
     colors: {
-      transparent: 'transparent',
       white: {
         100: '#fff',
         opacity: {
@@ -43,7 +42,6 @@ module.exports = {
     },
     extend: {
       backgroundColor: {
-        none: 'none',
         transparent: 'transparent',
       },
       borderWidth: {
