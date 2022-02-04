@@ -1,55 +1,39 @@
-import React, { lazy, Suspense, useEffect } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Outlet, Route, Routes } from 'react-router-dom';
 
-import { LiveComments } from '@/features/LiveComments/ui';
-import { Menu } from '@/features/Menu';
-import { PageLoader } from '@/shared/uiKit/Loader';
-import Header from '@/widgets/Header';
-import { Sidebar, sidebarModel } from '@/widgets/Sidebar';
+import { Layout } from '@/shared/components';
+import { Header } from '@/widgets/Header';
 
 const MainPage = lazy(() => import('./Main'));
 const ProfilePage = lazy(() => import('./Profile'));
 const SettingsPage = lazy(() => import('./Settings'));
-const WriteNewsPage = lazy(() => import('./WriteNews'));
 
 const Routing: React.FC = () => {
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route path='*' element={<MainLayout />}>
+      <Route path='/' element={<MainLayout />}>
+        <Route
+          index={true}
+          element={
+            <Suspense fallback={'Loading'}>
+              <MainPage />
+            </Suspense>
+          }
+        />
+        <Route path='profile'>
           <Route
-            index={true}
+            path=':id'
             element={
-              <Suspense fallback={<PageLoader />}>
-                <MainPage />
+              <Suspense fallback={'Loading'}>
+                <ProfilePage />
               </Suspense>
             }
           />
-          <Route path='profile'>
-            <Route
-              path=':id'
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <ProfilePage />
-                </Suspense>
-              }
-            />
-            <Route
-              path='settings'
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <SettingsPage />
-                </Suspense>
-              }
-            />
-          </Route>
-        </Route>
-        <Route path='write' element={<WriteLayout />}>
           <Route
-            index={true}
+            path='settings'
             element={
-              <Suspense fallback={<PageLoader />}>
-                <WriteNewsPage />
+              <Suspense fallback={'Loading'}>
+                <SettingsPage />
               </Suspense>
             }
           />
@@ -59,39 +43,17 @@ const Routing: React.FC = () => {
   );
 };
 
-const Layout: React.FC = () => {
-  return (
-    <div className='w-full overflow-hidden bg-white-bg'>
+const MainLayout = () => (
+  <Layout style={{ marginTop: '3rem' }}>
+    <Layout.Header>
       <Header />
-      <div className='mt-16 flex h-full w-full justify-between'>
-        <Sidebar>
-          <Menu />
-        </Sidebar>
-        <Outlet />
-      </div>
-    </div>
-  );
-};
-
-const MainLayout: React.FC = () => (
-  <>
-    <div className='flex w-full items-center justify-center lg:ml-56 xl:mr-56'>
+    </Layout.Header>
+    <Layout.Sider>LeftSider</Layout.Sider>
+    <Layout.Content>
       <Outlet />
-    </div>
-    <LiveComments />
-  </>
+    </Layout.Content>
+    <Layout.Sider>RightSider</Layout.Sider>
+  </Layout>
 );
-
-const WriteLayout: React.FC = () => {
-  useEffect(() => {
-    sidebarModel.events.setSidebarHidden(true);
-  }, []);
-
-  return (
-    <div className='flex w-full items-center justify-center'>
-      <Outlet />
-    </div>
-  );
-};
 
 export default Routing;

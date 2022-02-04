@@ -4,7 +4,6 @@ import { combine } from 'effector';
 import React from 'react';
 
 import { commentModel } from '@/entities/Comment';
-import { Button, Icon } from '@/shared/uiKit';
 
 import { liveCommentsHidden$, toggleLiveCommentsHidden } from '../../model';
 import { LiveCommentsList } from '../LiveCommentsList';
@@ -25,7 +24,7 @@ const LiveCommentsView: React.FC<LiveCommentsProps> = ({
         hidden && 'translate-x-64 transform'
       )}
     >
-      <Button
+      {/* <Button
         className={clsx(
           'border-none bg-transparent text-xl font-medium transition-transform duration-200',
           hidden && '-translate-x-40 translate-y-20 -rotate-90  transform '
@@ -41,7 +40,7 @@ const LiveCommentsView: React.FC<LiveCommentsProps> = ({
             hidden && 'tranform rotate-0'
           )}
         />
-      </Button>
+      </Button> */}
       <ul className='mt-6 flex flex-col'>
         <LiveCommentsContent />
       </ul>

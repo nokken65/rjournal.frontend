@@ -11,7 +11,9 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@effector/reflect": "^7.1.1",
+    "antd": "^4.18.5",
     "autoprefixer": "^10.4.2",
     "axios": "^0.25.0",
     "clsx": "^1.1.1",

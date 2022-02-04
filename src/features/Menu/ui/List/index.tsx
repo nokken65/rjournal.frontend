@@ -1,7 +1,7 @@
 import { list } from '@effector/reflect';
 
 import { menuModel } from '@/features/Menu';
-import { MenuItem } from '@/shared/uiKit';
+import { MenuItem } from '@/shared/components';
 
 type MenuListProps = {
   option: import('@/shared/api').Option;
