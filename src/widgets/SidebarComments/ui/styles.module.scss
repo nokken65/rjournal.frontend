@@ -1,0 +1,29 @@
+.toggleButton {
+  align-self: flex-start;
+
+  justify-content: flex-start;
+
+  margin-top: 1rem;
+  padding: 0.8rem;
+
+  & > svg {
+    order: 2;
+    transform: rotate(90deg);
+    margin-left: 1rem;
+  }
+
+  transition: transform 200ms ease-in;
+}
+
+.hidden {
+  z-index: 10;
+  transform: translate3d(-70%, 150%, 0) rotate(-90deg);
+
+  & > svg {
+    transform: rotate(180deg);
+  }
+}
+
+.fixHeight {
+  height: calc(100vh - 3.75rem - 4rem);
+}

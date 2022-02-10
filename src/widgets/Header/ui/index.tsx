@@ -1,22 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { SearchNews } from '@/features/SearchNews';
-import { Icon, Layout, Logo } from '@/shared/components';
-import { sidebarModel } from '@/widgets/Sidebar';
+import { Button, Icon, Layout, Logo } from '@/shared/components';
+import { sidebarMenuModel } from '@/widgets/SidebarMenu';
 
 import styles from './styles.module.scss';
 
 export const Header: React.FC = () => {
   return (
     <Layout.Header>
-      {/* <Button
-        icon={<MenuOutlined />}
-        onClick={() => sidebarModel.events.toggleSidebarHidden()}
-      /> */}
+      <Button
+        icon={<Icon name='burger' size={18} />}
+        className={styles.sidebarButton}
+        onClick={() => sidebarMenuModel.events.toggleSidebarMenuHidden()}
+      />
       <Logo />
       <SearchNews />
-      <Link
+      <Button label='Новая запись' className={styles.writeButton} />
+
+      <span style={{ marginRight: 'auto' }} />
+
+      <Button
+        icon={<Icon name='person' />}
+        label='Войти'
+        className={styles.loginButton}
+      />
+      {/* <Link
         to='write'
         className='ml-3 mr-auto flex h-10 items-center rounded-lg border-gray-50 bg-white-100 pl-3 pr-3 font-medium shadow-neo'
       >
@@ -29,7 +38,7 @@ export const Header: React.FC = () => {
       >
         <Icon name='person' className='mr-3' />
         <span>Войти</span>
-      </Link>
+      </Link> */}
     </Layout.Header>
   );
 };

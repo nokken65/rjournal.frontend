@@ -1,0 +1,31 @@
+.sidebarButton {
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.writeButton {
+  height: 70%;
+  padding: 0 1rem;
+
+  background-color: var(--white);
+  border: 0.5px solid var(--gray-50);
+  box-shadow: 0 2px 2px 0 rgba(#595959, 0.1);
+
+  &:hover {
+    box-shadow: 0 2px 2px 0 rgba(#595959, 0.3);
+  }
+}
+
+.loginButton {
+  padding-right: 3rem;
+  border: none;
+  background-color: transparent;
+
+  & > svg {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    color: var(--primary);
+  }
+}

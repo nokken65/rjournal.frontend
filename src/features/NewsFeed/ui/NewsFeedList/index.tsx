@@ -1,5 +1,4 @@
 import { list } from '@effector/reflect';
-import React from 'react';
 
 import { PostCard, postModel } from '@/entities/Post';
 
@@ -7,9 +6,9 @@ type NewsFeedListProps = {
   post: import('@/shared/api').Post;
 };
 
-const NewsFeedListView: React.FC<NewsFeedListProps> = ({ post }) => {
+const NewsFeedListView = ({ post }: NewsFeedListProps) => {
   return (
-    <li className='m-5 mt-0 list-none'>
+    <li>
       <PostCard data={post} />
     </li>
   );

@@ -1,6 +1,19 @@
 .sider {
-  background-color: aquamarine;
+  background-color: var(--bg);
 
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+
+  transition: all 200ms ease-in;
+
+  position: sticky;
+}
+
+.hideLeft {
+  width: 0;
+  transform: translateX(-100%);
+}
+
+.hideRight {
+  width: 0 !important;
+  transform: translateX(100%);
 }

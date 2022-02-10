@@ -3,13 +3,15 @@ import React from 'react';
 
 import { CommentCompact, commentModel } from '@/entities/Comment';
 
+import styles from './styles.module.scss';
+
 type LiveCommentsListProps = {
   comment: import('@/shared/api').Comment;
 };
 
 const LiveCommentsListView: React.FC<LiveCommentsListProps> = ({ comment }) => {
   return (
-    <li className='list-none mt-3 mb-3'>
+    <li className={styles.listItem}>
       <CommentCompact data={comment} />
     </li>
   );

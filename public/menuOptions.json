@@ -10,13 +10,13 @@
       "id": "new",
       "label": "Свежее",
       "icon": "clock",
-      "href": "/new"
+      "href": "/profile"
     },
     {
       "id": "bookmarks",
       "label": "Закладки",
       "icon": "bookmark",
-      "href": "/bookmarks"
+      "href": "/profile/settings"
     },
     {
       "id": "ratingRJ",

@@ -4,7 +4,7 @@ type CommentCompactProps = {
   data: import('@/shared/api').Comment;
 };
 
-export const CommentCompact: React.FC<CommentCompactProps> = ({ data }) => {
+export const CommentCompact = ({ data }: CommentCompactProps) => {
   return (
     <div>
       <p>User: {data.userId}</p>
