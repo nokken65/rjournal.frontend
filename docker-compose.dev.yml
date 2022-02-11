@@ -10,8 +10,8 @@ services:
     environment:
       NODE_ENV: development
       HOST: 0.0.0.0
-    networks:
-      - api
+    # networks:
+    # - api
     working_dir: /app
     restart: always
     command: sh -c "cd /app; yarn install; yarn run dev"
