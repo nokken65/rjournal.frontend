@@ -1,2 +1,8 @@
 .link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--secondary);
+  }
 }

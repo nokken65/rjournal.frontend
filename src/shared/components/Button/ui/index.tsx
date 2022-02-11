@@ -7,12 +7,11 @@ type ButtonProps = HTMLAttributes<HTMLButtonElement> & {
   icon?: JSX.Element;
   label?: string;
   className?: string;
-  onClick?: (event: MouseEvent) => void;
 };
 
-export const Button = ({ icon, label, className, onClick }: ButtonProps) => {
+export const Button = ({ icon, label, className, ...props }: ButtonProps) => {
   return (
-    <button className={clsx(styles.button, className)} onClick={onClick}>
+    <button className={clsx(styles.button, className)} {...props}>
       {icon}
       {label && <p>{label}</p>}
     </button>

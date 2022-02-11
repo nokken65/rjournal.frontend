@@ -8,7 +8,7 @@ type NewsFeedListProps = {
 
 const NewsFeedListView = ({ post }: NewsFeedListProps) => {
   return (
-    <li>
+    <li style={{ marginBottom: '2rem' }}>
       <PostCard data={post} />
     </li>
   );

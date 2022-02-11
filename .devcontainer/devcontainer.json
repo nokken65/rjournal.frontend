@@ -1,10 +1,21 @@
 {
   "name": "RJournal frontend",
   "dockerFile": "Dockerfile",
-  "appPort": 3000,
-  "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+  "appPort": [3000],
+  "build": {
+    "args": {
+      "network": "host"
+    }
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets"
+  ],
   "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash"
+    "terminal.integrated.defaultProfile.linux": "sh"
   },
   "postCreateCommand": "yarn install",
   // Закомментируйте следующую строку, чтобы запустить как root. Пользователи Linux, обновите Dockerfile значением UID/GID вашего пользователя (если оно не 1000)
