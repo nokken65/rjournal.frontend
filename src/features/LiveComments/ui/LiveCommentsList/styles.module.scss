@@ -1,0 +1,5 @@
+.listItem {
+  & ~ .listItem {
+    margin-top: 0.5rem;
+  }
+}

@@ -4,9 +4,11 @@ import { combine } from 'effector';
 import { menuModel } from '@/features/Menu';
 import { MenuList } from '@/features/Menu';
 
+import styles from './styles.module.scss';
+
 export const Menu = () => {
   return (
-    <ul className='m-3 flex w-56 flex-col'>
+    <ul className={styles.menu}>
       <MenuContent />
     </ul>
   );

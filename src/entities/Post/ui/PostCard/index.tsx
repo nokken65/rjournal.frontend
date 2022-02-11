@@ -1,13 +1,27 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+
+import { Card } from '@/shared/components';
 
 type PostCardProps = {
   data: import('@/shared/api').Post;
 };
 
-export const PostCard: React.FC<PostCardProps> = ({ data }) => {
+export const PostCard = ({ data }: PostCardProps) => {
   return (
-    <article className='relative mb-10 flex flex-col'>
+    // <Card>
+    //   <Card.Header> </Card.Header>
+    //   <Card.Content></Card.Content>
+    //   <Card.Footer> </Card.Footer>
+    // </Card>
+    <article
+      className='relative mb-10 flex flex-col'
+      style={{
+        width: '50rem',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <div className='flex h-14 items-center justify-between pl-5'>
         <Link
           to={`/profile/${data.userName}`}

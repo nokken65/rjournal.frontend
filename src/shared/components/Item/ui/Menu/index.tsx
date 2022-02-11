@@ -1,27 +1,14 @@
-import clsx from 'clsx';
-import { NavLink } from 'react-router-dom';
-
-import { Icon } from '@/shared/components';
+import { Icon, Link } from '@/shared/components';
 
 type MenuItemProps = {
   data: import('@/shared/api').Option;
-  active: boolean;
 };
 
-export const MenuItem = ({ data, active }: MenuItemProps) => {
+export const MenuItem = ({ data }: MenuItemProps) => {
   return (
-    <NavLink
-      to={data.href}
-      className={({ isActive }) =>
-        clsx(
-          'flex h-11 w-full items-center justify-start rounded-lg border-none pl-3 pr-3',
-          isActive && 'bg-white-100 text-primary-100 shadow-neo',
-          !isActive && 'hover:bg-white-opacity-80 hover:shadow-neo'
-        )
-      }
-    >
+    <Link.Nav to={data.href}>
       <Icon name={data.icon} size={20} />
-      <span className='ml-3 text-black-100'>{data.label}</span>
-    </NavLink>
+      <p>{data.label}</p>
+    </Link.Nav>
   );
 };

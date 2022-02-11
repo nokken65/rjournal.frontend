@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from 'react';
 import { Outlet, Route, Routes } from 'react-router-dom';
 
-import { Layout } from '@/shared/components';
+import { Container, Layout } from '@/shared/components';
 import { Header } from '@/widgets/Header';
+import { SidebarComments } from '@/widgets/SidebarComments';
+import { SidebarMenu } from '@/widgets/SidebarMenu';
 
 const MainPage = lazy(() => import('./Main'));
 const ProfilePage = lazy(() => import('./Profile'));
@@ -11,32 +13,34 @@ const SettingsPage = lazy(() => import('./Settings'));
 const Routing: React.FC = () => {
   return (
     <Routes>
-      <Route path='/' element={<MainLayout />}>
-        <Route
-          index={true}
-          element={
-            <Suspense fallback={'Loading'}>
-              <MainPage />
-            </Suspense>
-          }
-        />
-        <Route path='profile'>
+      <Route element={<MainLayout />}>
+        <Route path='/'>
           <Route
-            path=':id'
+            index={true}
             element={
               <Suspense fallback={'Loading'}>
-                <ProfilePage />
+                <MainPage />
               </Suspense>
             }
           />
-          <Route
-            path='settings'
-            element={
-              <Suspense fallback={'Loading'}>
-                <SettingsPage />
-              </Suspense>
-            }
-          />
+          <Route path='profile'>
+            <Route
+              path=':id'
+              element={
+                <Suspense fallback={'Loading'}>
+                  <ProfilePage />
+                </Suspense>
+              }
+            />
+            <Route
+              path='settings'
+              element={
+                <Suspense fallback={'Loading'}>
+                  <SettingsPage />
+                </Suspense>
+              }
+            />
+          </Route>
         </Route>
       </Route>
     </Routes>
@@ -44,15 +48,15 @@ const Routing: React.FC = () => {
 };
 
 const MainLayout = () => (
-  <Layout style={{ marginTop: '3rem' }}>
-    <Layout.Header>
-      <Header />
-    </Layout.Header>
-    <Layout.Sider>LeftSider</Layout.Sider>
+  <Layout>
+    <Header />
+    <SidebarMenu />
     <Layout.Content>
-      <Outlet />
+      <Container>
+        <Outlet />
+      </Container>
     </Layout.Content>
-    <Layout.Sider>RightSider</Layout.Sider>
+    <SidebarComments />
   </Layout>
 );
 

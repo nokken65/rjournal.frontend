@@ -1,14 +1,13 @@
 import { variant } from '@effector/reflect';
 import { combine } from 'effector';
-import React from 'react';
 
 import { postModel } from '@/entities/Post';
 
 import { NewsFeedList } from '../NewsFeedList';
 
-export const NewsFeed: React.FC = () => {
+export const NewsFeed = () => {
   return (
-    <ul className='flex flex-col justify-center'>
+    <ul>
       <NewsFeedContent />
     </ul>
   );

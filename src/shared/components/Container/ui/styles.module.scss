@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 3.75rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  scroll-behavior: smooth;
+
+  overflow-y: hidden;
+  &:hover {
+    overflow-y: scroll;
+    padding-right: 0;
+  }
+
+  //chrome
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-50);
+    border-radius: 8px;
+  }
+
+  //firefox
+  scrollbar-color: var(--gray-50) transparent;
+
+  //fix jumping scroll
+  padding-right: 0.8rem;
+  -webkit-padding-end: 0.4rem;
+}

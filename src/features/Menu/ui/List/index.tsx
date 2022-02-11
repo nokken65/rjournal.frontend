@@ -3,15 +3,17 @@ import { list } from '@effector/reflect';
 import { menuModel } from '@/features/Menu';
 import { MenuItem } from '@/shared/components';
 
+import styles from './styles.module.scss';
+
 type MenuListProps = {
   option: import('@/shared/api').Option;
   activeOption: string;
 };
 
-const MenuListView = ({ option, activeOption }: MenuListProps) => {
+const MenuListView = ({ option }: MenuListProps) => {
   return (
-    <li className='mb-1 list-none'>
-      <MenuItem data={option} active={option.id === activeOption} />
+    <li className={styles.menuItem}>
+      <MenuItem data={option} />
     </li>
   );
 };
