@@ -5,6 +5,7 @@ import { Container, Layout } from '@/shared/components';
 import { Header } from '@/widgets/Header';
 import { SidebarComments } from '@/widgets/SidebarComments';
 import { SidebarMenu } from '@/widgets/SidebarMenu';
+import { WriteNewsModal } from '@/widgets/WriteNewsModal';
 
 const MainPage = lazy(() => import('./Main'));
 const ProfilePage = lazy(() => import('./Profile'));
@@ -57,6 +58,7 @@ const MainLayout = () => (
       </Container>
     </Layout.Content>
     <SidebarComments />
+    <WriteNewsModal />
   </Layout>
 );
 

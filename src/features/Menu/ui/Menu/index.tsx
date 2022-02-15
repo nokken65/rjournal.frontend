@@ -2,15 +2,15 @@ import { variant } from '@effector/reflect';
 import { combine } from 'effector';
 
 import { menuModel } from '@/features/Menu';
-import { MenuList } from '@/features/Menu';
+import { List } from '@/shared/components';
 
-import styles from './styles.module.scss';
+import { MenuList } from '../MenuList';
 
 export const Menu = () => {
   return (
-    <ul className={styles.menu}>
+    <List>
       <MenuContent />
-    </ul>
+    </List>
   );
 };
 

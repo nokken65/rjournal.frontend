@@ -1,2 +1,1 @@
-export * from './Menu';
-export * from './Subscription';
+export * from './Default';

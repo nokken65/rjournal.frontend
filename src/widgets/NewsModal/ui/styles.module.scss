@@ -1,0 +1,24 @@
+.wrapper {
+  z-index: 10;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  box-shadow: 0 0 2px 0 rgba(#595959, 0.8);
+}
+
+.list {
+  padding: 0.4rem;
+
+  & > li {
+    margin: 0 !important ;
+  }
+}
+
+.buttonItem {
+  width: 100%;
+  font-weight: 400;
+
+  &:hover {
+    background-color: rgba(#595959, 0.1);
+  }
+}

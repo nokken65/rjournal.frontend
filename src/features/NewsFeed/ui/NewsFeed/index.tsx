@@ -1,23 +1,25 @@
 import { variant } from '@effector/reflect';
 import { combine } from 'effector';
 
-import { postModel } from '@/entities/Post';
+import { newsModel } from '@/entities/News';
+import { List } from '@/shared/components';
 
 import { NewsFeedList } from '../NewsFeedList';
+import styles from './styles.module.scss';
 
 export const NewsFeed = () => {
   return (
-    <ul>
+    <List className={styles.newsFeed}>
       <NewsFeedContent />
-    </ul>
+    </List>
   );
 };
 
 const NewsFeedContent = variant({
   source: combine(
     {
-      isLoading: postModel.postsIsLoading$,
-      isEmpty: postModel.postsIsEmpty$,
+      isLoading: newsModel.newsIsLoading$,
+      isEmpty: newsModel.newsIsEmpty$,
     },
     ({ isLoading, isEmpty }) => {
       if (isLoading) return 'loading';
@@ -31,6 +33,6 @@ const NewsFeedContent = variant({
     ready: NewsFeedList,
   },
   hooks: {
-    mounted: postModel.getPostsFx.prepend(() => {}),
+    mounted: newsModel.getNewsFx.prepend(() => {}),
   },
 });

@@ -5,7 +5,11 @@ import { NewsFeed } from '@/features/NewsFeed';
 const MainPage: React.FC = () => {
   console.log(new Date().toISOString());
 
-  return <NewsFeed />;
+  return (
+    <>
+      <NewsFeed />;
+    </>
+  );
 };
 
 export default MainPage;

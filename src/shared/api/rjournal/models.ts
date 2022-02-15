@@ -12,7 +12,7 @@ export type Comment = {
   content: string;
 };
 
-export type Post = {
+export type News = {
   id: string;
   userName: string;
   title: string;

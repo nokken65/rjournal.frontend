@@ -2,15 +2,15 @@ import { variant } from '@effector/reflect';
 import { combine } from 'effector';
 
 import { commentModel } from '@/entities/Comment';
+import { List } from '@/shared/components';
 
 import { LiveCommentsList } from '../LiveCommentsList';
-import styles from './styles.module.scss';
 
 export const LiveComments = () => {
   return (
-    <ul className={styles.list}>
+    <List>
       <LiveCommentsContent />
-    </ul>
+    </List>
   );
 };
 

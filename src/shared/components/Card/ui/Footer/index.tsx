@@ -1,9 +1,10 @@
+import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 
 import styles from './styles.module.scss';
 
-type CardFooterProps = PropsWithChildren<{}>;
+type CardFooterProps = PropsWithChildren<{ className?: string }>;
 
-export const CardFooter = ({ children }: CardFooterProps) => {
-  return <div className={styles.cardFooter}>{children}</div>;
+export const CardFooter = ({ children, className }: CardFooterProps) => {
+  return <div className={clsx(styles.cardFooter, className)}>{children}</div>;
 };

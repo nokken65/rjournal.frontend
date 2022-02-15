@@ -2,18 +2,17 @@ import { list } from '@effector/reflect';
 import React from 'react';
 
 import { CommentCompact, commentModel } from '@/entities/Comment';
+import { List } from '@/shared/components';
 
-import styles from './styles.module.scss';
-
-type LiveCommentsListProps = {
+type LiveCommentsItemProps = {
   comment: import('@/shared/api').Comment;
 };
 
-const LiveCommentsListView: React.FC<LiveCommentsListProps> = ({ comment }) => {
+const LiveCommentsListView: React.FC<LiveCommentsItemProps> = ({ comment }) => {
   return (
-    <li className={styles.listItem}>
+    <List.Item>
       <CommentCompact data={comment} />
-    </li>
+    </List.Item>
   );
 };
 

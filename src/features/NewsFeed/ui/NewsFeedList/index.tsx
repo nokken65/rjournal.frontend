@@ -1,24 +1,25 @@
 import { list } from '@effector/reflect';
 
-import { PostCard, postModel } from '@/entities/Post';
+import { NewsCard, newsModel } from '@/entities/News';
+import { List } from '@/shared/components';
 
 type NewsFeedListProps = {
-  post: import('@/shared/api').Post;
+  news: import('@/shared/api').News;
 };
 
-const NewsFeedListView = ({ post }: NewsFeedListProps) => {
+const NewsFeedListView = ({ news }: NewsFeedListProps) => {
   return (
-    <li style={{ marginBottom: '2rem' }}>
-      <PostCard data={post} />
-    </li>
+    <List.Item>
+      <NewsCard data={news} />
+    </List.Item>
   );
 };
 
 export const NewsFeedList = list({
   view: NewsFeedListView,
-  source: postModel.posts$,
+  source: newsModel.news$,
   mapItem: {
-    post: (post) => post,
+    news: (news) => news,
   },
-  getKey: (post) => post.id,
+  getKey: (news) => news.id,
 });

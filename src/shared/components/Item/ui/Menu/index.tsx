@@ -1,14 +1,20 @@
 import { Icon, Link } from '@/shared/components';
 
-type MenuItemProps = {
-  data: import('@/shared/api').Option;
+import styles from './styles.module.scss';
+
+type MenuProps = {
+  to: string;
+  label: string;
+  icon: string;
 };
 
-export const MenuItem = ({ data }: MenuItemProps) => {
+export const Menu = ({ to, label, icon }: MenuProps) => {
   return (
-    <Link.Nav to={data.href}>
-      <Icon name={data.icon} size={20} />
-      <p>{data.label}</p>
-    </Link.Nav>
+    <li className={styles.menuItem}>
+      <Link.Nav to={to}>
+        <Icon name={icon} size={20} />
+        <p>{label}</p>
+      </Link.Nav>
+    </li>
   );
 };

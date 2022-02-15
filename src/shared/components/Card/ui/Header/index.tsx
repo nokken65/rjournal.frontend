@@ -1,9 +1,10 @@
+import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 
 import styles from './styles.module.scss';
 
-type CardHeaderProps = PropsWithChildren<{}>;
+type CardHeaderProps = PropsWithChildren<{ className?: string }>;
 
-export const CardHeader = ({ children }: CardHeaderProps) => {
-  return <div className={styles.cardHeader}>{children}</div>;
+export const CardHeader = ({ children, className }: CardHeaderProps) => {
+  return <div className={clsx(styles.cardHeader, className)}>{children}</div>;
 };

@@ -1,0 +1,57 @@
+.wrapper {
+  z-index: 40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#595959, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 1rem;
+  width: 80rem;
+  height: 90vh;
+}
+
+.expandWrapper {
+  z-index: 5;
+  top: 3.8rem;
+  padding-bottom: 3.8rem;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#595959, 0.5);
+  display: flex;
+}
+
+.expandCard {
+  padding: 1rem;
+  min-width: 100%;
+  border-radius: 0;
+}
+
+.publishBtn {
+  padding: 0.6rem 1rem;
+  color: var(--white);
+  background-color: var(--secondary);
+}
+
+.header {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  width: 100%;
+  justify-content: flex-start;
+}

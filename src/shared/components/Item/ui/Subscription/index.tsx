@@ -1,5 +1,3 @@
-import React from 'react';
-
-export const SubscriptionItem = () => {
+export const Subscription = () => {
   return <div></div>;
 };

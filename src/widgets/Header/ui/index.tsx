@@ -3,6 +3,7 @@ import React from 'react';
 import { SearchNews } from '@/features/SearchNews';
 import { Button, Icon, Layout, Logo } from '@/shared/components';
 import { sidebarMenuModel } from '@/widgets/SidebarMenu';
+import { writeNewsModalModel } from '@/widgets/WriteNewsModal';
 
 import styles from './styles.module.scss';
 
@@ -16,7 +17,11 @@ export const Header: React.FC = () => {
       />
       <Logo />
       <SearchNews />
-      <Button label='Новая запись' className={styles.writeButton} />
+      <Button
+        label='Новая запись'
+        className={styles.writeButton}
+        onClick={() => writeNewsModalModel.events.setActive()}
+      />
 
       <span style={{ marginRight: 'auto' }} />
 
